@@ -96,9 +96,9 @@ class SortingRobot:
         self.swap_item()
         while True:
             while self.move_right():
-                if self.compare_item() >= 1:
+                if self.compare_item() == 1:
                     self.swap_item()
-            if (self.can_move_right() == False) and (self.compare_item() == None):
+            if self.compare_item() == None and self.can_move_right() == False:
                 self.swap_item()
                 break
             while self.move_left():
